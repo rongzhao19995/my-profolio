@@ -1,0 +1,87 @@
+.back-btn-wrap {
+    text-align: center
+}
+
+.back-btn {
+    display: inline-block;
+    font-size: 3.2rem;
+    color: #020b16;
+    letter-spacing: 0.2em;
+    position: relative;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translate3d(44px, 0, 0);
+    transform: translate3d(44px, 0, 0)
+}
+
+@media screen and (max-width: 420px) {
+    .back-btn {
+        font-size:1.6rem;
+        -webkit-transform: translate3d(22px, 0, 0);
+        transform: translate3d(22px, 0, 0)
+    }
+}
+
+.back-btn:after {
+    content: "";
+    width: 64px;
+    height: 2px;
+    background: #020b16;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -88px;
+    margin: auto;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s
+}
+
+@media screen and (max-width: 420px) {
+    .back-btn:after {
+        width:32px;
+        left: -44px
+    }
+}
+
+.back-btn:before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: #020b16;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -88px;
+    margin: auto;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s
+}
+
+@media screen and (max-width: 800px) {
+    .back-btn:before {
+        width:12px;
+        left: -44px;
+        -webkit-transform: rotate(-45deg) translate3d(4px, -4px, 0);
+        transform: rotate(-45deg) translate3d(4px, -4px, 0);
+        display: none
+    }
+}
+
+.back-btn:hover {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.back-btn:hover:after {
+    width: 80px;
+    left: -112px
+}
+
+.back-btn:hover:before {
+    left: -112px;
+    -webkit-transform: rotate(-45deg) translate3d(2px, -8px, 0);
+    transform: rotate(-45deg) translate3d(2px, -8px, 0)
+}

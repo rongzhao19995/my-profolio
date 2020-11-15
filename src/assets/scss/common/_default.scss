@@ -1,0 +1,58 @@
+html {
+    font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    @include lg {
+        font-size: 58%;
+    }
+    @include md {
+        font-size: 52%;
+    }
+    @include sm {
+        font-size: 50%;
+    }
+}
+
+*,:after,:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'osawald_regular','futura_r','Helvetica Neue','Helvetica', sans-serif;
+    color: #828c96;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.2
+}
+
+p {
+    line-height: 2;
+    word-wrap: break-word;
+    white-space: normal
+}
+
+
+li {
+    list-style-type: none
+}
+
+a {
+    color: #072142;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    width: 100%
+}
