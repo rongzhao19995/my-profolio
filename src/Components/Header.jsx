@@ -8,6 +8,7 @@ import anime from 'animejs/lib/anime.es.js';
 export const Header = () => {
 
     useEffect(() => {
+
         anime.timeline()
         .add({
             targets:".header .name",
