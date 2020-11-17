@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import anime from 'animejs/lib/anime.es.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 export const Fullpage = () => {
 
@@ -119,7 +126,18 @@ export const Fullpage = () => {
           <div className="section">
             <div className="fullpage__slide">
               <div className="main-title">
-              <h1 class="main-title__text"><span class="letter">FRONT</span> <span class="letter">END</span> <span class="letter">DEVELOPER</span>  <br/><span class="letter">BORN</span> <span class="letter">IN</span> <span class="letter">MALAYSIA</span> <br/> <span class="letter">LIVING</span> <span class="letter">IN</span> <span class="letter">KUALA</span> <span class="letter">LUMPUR</span></h1>
+                <h1 class="main-title__text">
+                  <span class="letter">FRONT</span>{" "}
+                  <span class="letter">END</span>{" "}
+                  <span class="letter">DEVELOPER</span> <br />
+                  <span class="letter">BORN</span>{" "}
+                  <span class="letter">IN</span>{" "}
+                  <span class="letter">MALAYSIA</span> <br />{" "}
+                  <span class="letter">LIVING</span>{" "}
+                  <span class="letter">IN</span>{" "}
+                  <span class="letter">KUALA</span>{" "}
+                  <span class="letter">LUMPUR</span>
+                </h1>
               </div>
             </div>
           </div>
@@ -127,11 +145,18 @@ export const Fullpage = () => {
             <div className="fullpage__slide">
               <div className="title">
                 <h2 className="title__text js-letter">My Work</h2>
-                <div className="border js-letter"><span></span><span className="js-letter"></span></div>
+                <div className="border js-letter">
+                  <span></span>
+                  <span className="js-letter"></span>
+                </div>
                 <p className="title__lead js-letter">website</p>
-                <div className="btn-wrap js-letter"><a className="btn" href="./reile.html">Show me more</a></div>
+                <div className="btn-wrap js-letter">
+                  <Link className="btn" to="/work">
+                    Show me more
+                  </Link>
+                </div>
               </div>
-              <a className="image image--works" href="/reile.html">
+              <Link className="image image--works" to="/work">
                 <div className="image__over">
                   <div className="image__cover"></div>
                   <div className="image__cover"></div>
@@ -139,35 +164,67 @@ export const Fullpage = () => {
                 <div className="page-num">
                   <p>01</p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="section">
             <div className="fullpage__slide">
               <div className="title">
                 <h2 className="title__text js-letter">About Me</h2>
-                <div className="border js-letter"><span></span><span className="js-letter"></span></div>
-                <p className="title__lead js-letter">I love Design, Technology,<br/>and Story.</p>
-                <div className="btn-wrap js-letter"><a className="btn" href="./about.html">Show me more</a></div>
-              </div><a className="image image--about" href="./about.html">
+                <div className="border js-letter">
+                  <span></span>
+                  <span className="js-letter"></span>
+                </div>
+                <p className="title__lead js-letter">
+                  I love Design, Technology,
+                  <br />
+                  and Story.
+                </p>
+                <div className="btn-wrap js-letter">
+                  <Link className="btn" to="/about">
+                    Show me more
+                  </Link>
+                </div>
+              </div>
+              <Link className="image image--about" to="/about">
                 <div className="image__over">
                   <div className="image__cover"></div>
                   <div className="image__cover"></div>
                 </div>
                 <div className="page-num">
                   <p>02</p>
-                </div></a>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="section">
             <div className="fullpage__slide">
               <div className="title">
                 <h2 className="title__text js-letter">Get In Touch</h2>
-                <div className="border js-letter"><span></span><span className="js-letter"></span></div>
+                <div className="border js-letter">
+                  <span></span>
+                  <span className="js-letter"></span>
+                </div>
                 <ul>
-                  <li className="js-letter"><a href="mailto:kuon609@gmail.com">kuon609@gmail.com</a></li>
-                  <li className="js-letter"><a href="https://www.wantedly.com/users/48483598" target="_blank">Wantedly</a></li>
-                  <li className="js-letter"><a href="https://twitter.com/Goldi69s" target="_blank"><i className="fab fa-twitter"></i></a><a href="https://dribbble.com/kuon_yagi" target="_blank"><i className="fab fa-dribbble"></i></a></li>
+                  <li className="js-letter">
+                    <a href="mailto:kuon609@gmail.com">kuon609@gmail.com</a>
+                  </li>
+                  <li className="js-letter">
+                    <a
+                      href="https://www.wantedly.com/users/48483598"
+                      target="_blank"
+                    >
+                      Wantedly
+                    </a>
+                  </li>
+                  <li className="js-letter">
+                    <a href="https://twitter.com/Goldi69s" target="_blank">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://dribbble.com/kuon_yagi" target="_blank">
+                      <i className="fab fa-dribbble"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="image image--contact">
