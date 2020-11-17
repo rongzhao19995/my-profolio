@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -7,24 +7,28 @@ import anime from 'animejs/lib/anime.es.js';
 
 export const Header = () => {
 
+    const elementRef = useRef();
+
     useEffect(() => {
 
-        anime.timeline()
-        .add({
-            targets:".header .name",
+        anime.timeline
+        ({
+            targets: ".loader",
+            translateY: [0, "-100%"],
             translateZ: 0,
-            opacity:[0,1],
-            easing: "linear",
-            duration: 1000,
-        }).add({
-            targets: ".header .wrapper",
-            opacity:[0,1],
             easing: "easeInOutCubic",
-            duration: 1000,
-            offset: "-=20000000",
-            delay: function(el, i) {
-                return 100 * i
-            },
+            duration: 800,
+            offset: "-=1000",
+            complete: function() {
+                elementRef.current.classList.add('js-hidden');
+            }
+        })
+        .add({
+            targets: ".main-title__text .letter",
+            opacity: [0,1],
+            easing: "easeInOutQuad",
+            duration: 1200,
+            delay: (el, i) => 100 * (i+1)
           })
 
     }, []);
@@ -42,6 +46,7 @@ export const Header = () => {
                 </div>
                 <div className="wrapper"><GiHamburgerMenu size={40}/></div>
             </div>
+            <div className="loader" ref={elementRef}></div>
         </header>
     )
 }
