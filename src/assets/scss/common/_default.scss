@@ -14,15 +14,15 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
     
-    @include lg {
-        font-size: 58%;
-    }
-    @include md {
-        font-size: 52%;
-    }
-    @include sm {
-        font-size: 50%;
-    }
+    // @include lg {
+    //     font-size: 58%;
+    // }
+    // @include md {
+    //     font-size: 52%;
+    // }
+    // @include sm {
+    //     font-size: 50%;
+    // }
 }
 
 *,:after,:before {
@@ -53,7 +53,6 @@ li {
 }
 
 a {
-    // color: #072142;
     color: #fff;
     text-decoration: none
 }

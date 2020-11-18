@@ -1,6 +1,10 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import anime from "animejs/lib/anime.es.js";
+import { SectionOne } from "../pages/SectionOne";
+import { SectionTwo } from "../pages/SectionTwo";
+import { SectionThree } from "../pages/SectionThree";
+import { SectionFour } from "../pages/SectionFour";
 
 export const Fullpage = () => {
   const onLeave = (origin, destination, direction) => {
@@ -16,13 +20,16 @@ export const Fullpage = () => {
           easing: "easeOutExpo",
           opacity: [0, 1],
         })
-        .add({
-          targets: ".header .wrapper",
-          translateY: [-50, 0],
-          easing: "easeOutExpo",
-          delay: (el, i) => 50 * i,
-          opacity: [0, 1],
-        }, "-=500")
+        .add(
+          {
+            targets: ".header .wrapper",
+            translateY: [-50, 0],
+            easing: "easeOutExpo",
+            delay: (el, i) => 50 * i,
+            opacity: [0, 1],
+          },
+          "-=500"
+        )
         .add(
           {
             targets: ".main-title__text .letter",
@@ -54,13 +61,16 @@ export const Fullpage = () => {
           easing: "easeOutExpo",
           opacity: [1, 0],
         })
-        .add({
-          targets: ".header .wrapper",
-          translateY: [0, -50],
-          easing: "easeOutExpo",
-          delay: (el, i) => 50 * i,
-          opacity: [1, 0],
-        }, "-=500")
+        .add(
+          {
+            targets: ".header .wrapper",
+            translateY: [0, -50],
+            easing: "easeOutExpo",
+            delay: (el, i) => 50 * i,
+            opacity: [1, 0],
+          },
+          "-=500"
+        )
         .add(
           {
             targets: ".main-title__text .letter",
@@ -140,7 +150,7 @@ export const Fullpage = () => {
     anime({
       targets: nextClass + " .js-letter",
       // translateX: ["-105%", 0],
-      opacity:[0,1],
+      opacity: [0, 1],
       translateZ: 0,
       easing: "easeInOutCubic",
       duration: 2000,
@@ -187,119 +197,16 @@ export const Fullpage = () => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <div className="fullpage__slide">
-                <div className="main-title">
-                  <h1 class="main-title__text">
-                    <span class="letter">FRONT</span>{" "}
-                    <span class="letter">END</span>{" "}
-                    <span class="letter">DEVELOPER</span> <br />
-                    <span class="letter">BORN</span>{" "}
-                    <span class="letter">IN</span>{" "}
-                    <span class="letter">MALAYSIA</span> <br />{" "}
-                    <span class="letter">LIVING</span>{" "}
-                    <span class="letter">IN</span>{" "}
-                    <span class="letter">KUALA</span>{" "}
-                    <span class="letter">LUMPUR</span>
-                  </h1>
-                </div>
-              </div>
+              <SectionOne />
             </div>
             <div className="section">
-              <div className="fullpage__slide">
-                <div className="title">
-                  <h2 className="title__text js-letter">My Work</h2>
-                  {/* <div className="border js-letter">
-                    <span></span>
-                    <span className="js-letter"></span>
-                  </div> */}
-                  <p className="title__lead js-letter">website</p>
-                  <div className="btn-wrap js-letter">
-                    <a className="btn" href="./reile.html">
-                      Show me more
-                    </a>
-                  </div>
-                </div>
-                <a className="image image--works" href="/reile.html">
-                  <div className="image__over">
-                    <div className="image__cover"></div>
-                    <div className="image__cover"></div>
-                  </div>
-                  <div className="page-num">
-                    <p> I </p>
-                  </div>
-                </a>
-              </div>
+              <SectionTwo />
             </div>
             <div className="section">
-              <div className="fullpage__slide">
-                <div className="title">
-                  <h2 className="title__text js-letter">About Me</h2>
-                  {/* <div className="border js-letter">
-                    <span></span>
-                    <span className="js-letter"></span>
-                  </div> */}
-                  <p className="title__lead js-letter">
-                    I love Design, Animation,
-                    <br />
-                    and Beauty Things.
-                  </p>
-                  <div className="btn-wrap js-letter">
-                    <a className="btn" href="./about.html">
-                      Show me more
-                    </a>
-                  </div>
-                </div>
-                <a className="image image--about" href="./about.html">
-                  <div className="image__over">
-                    <div className="image__cover"></div>
-                    <div className="image__cover"></div>
-                  </div>
-                  <div className="page-num">
-                    <p>	II </p>
-                  </div>
-                </a>
-              </div>
+              <SectionThree />
             </div>
             <div className="section">
-              <div className="fullpage__slide">
-                <div className="title">
-                  <h2 className="title__text js-letter">Lets Connect Together</h2>
-                  {/* <div className="border js-letter">
-                    <span></span>
-                    <span className="js-letter"></span>
-                  </div> */}
-                  <ul>
-                    <li className="js-letter">
-                      <a href="mailto:rongzhao195@gmail.com">rongzhao195@gmail.com</a>
-                    </li>
-                    <li className="js-letter">
-                      <a
-                        href="https://github.com/rongzhao19995"
-                        target="_blank"
-                      >
-                        GitHub
-                      </a>
-                    </li>
-                    {/* <li className="js-letter">
-                      <a href="https://twitter.com/Goldi69s" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="https://dribbble.com/kuon_yagi" target="_blank">
-                        <i className="fab fa-dribbble"></i>
-                      </a>
-                    </li> */}
-                  </ul>
-                </div>
-                <div className="image image--contact">
-                  <div className="image__over">
-                    <div className="image__cover"></div>
-                    <div className="image__cover"></div>
-                  </div>
-                  <div className="page-num">
-                    <p> III </p>
-                  </div>
-                </div>
-              </div>
+              <SectionFour />
             </div>
           </ReactFullpage.Wrapper>
         );

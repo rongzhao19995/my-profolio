@@ -1,14 +1,10 @@
-import './assets/main.css'
-import { Fullpage } from './Components/FullPage';
-import { Header } from './Components/Header';
+import './assets/main.css';
+import { FullPageContainer } from './Components/FullPageContainer'
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Fullpage/>
-      <p class="scrollDown">SCROLLDOWN</p>
-      <div class="sky-color"></div>
+      <FullPageContainer/>
     </div>
   );
 }

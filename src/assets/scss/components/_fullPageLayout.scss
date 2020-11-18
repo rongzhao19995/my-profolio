@@ -8,19 +8,9 @@
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    color: #fff
-}
+    color: #fff;
 
-#fp-nav {
-
-    &.fp-left {
-        opacity: 0;
-    }
-    
-}
-
-@media screen and (max-width: 420px) {
-    .fullpage__slide {
+    @include sm {
         display:block;
         height: 100%;
         position: absolute;
@@ -29,7 +19,6 @@
         max-height: 761px
     }
 }
-
 
 .main-wrapper {
     position: absolute;
@@ -50,31 +39,97 @@
     -webkit-transform: translate3d(0, -50%, 0);
     transform: translate3d(0, -50%, 0);
     z-index: 200;
-    margin-left: 15%
-}
+    margin-left: 15%;
 
-.main-title {
-    margin-left: 25%;
-}
-
-@media screen and (max-width: 420px) {
-    .main-title {
-        width: 80%;
-        height: 55.633%;
-        margin: 0 10%;
-        top: 5%;
-        position: fixed;
+    &__text {
+        font-size: 12rem;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.6rem;
+        font-family: "futura_m";
+        font-weight: normal;
+        text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
+    
+        @include md {
+            font-size:7.6rem;
+        }
+    
+        @include sm {
+            font-size: 6.8rem;
+            margin-bottom: 0.8rem;
+            text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
+        }
+    
     }
-}
 
-@media screen and (max-width: 800px) {
-    .title {
+    li {
+        margin-bottom: 1.6rem;
+
+        &::last-child {
+            margin-bottom: 0;
+
+            a {
+                margin-right: 3.2rem;
+
+                @include sm {
+                    margin-right:1.6rem;
+                }
+
+            }
+
+        }
+
+        @include sm {
+            margin-bottom:0.8rem;
+            line-height: 1.1
+        }
+    }
+
+    .border {
+        display: inline-block;
+        margin-bottom: 3.2rem;
+
+        span {
+            display: block;
+            width: 88px;
+            height: 4px;
+            border-radius: 5px;
+            background: #fff55a;
+
+            &::first-child {
+                margin-bottom: 1.4rem;
+
+                @include sm {
+                    margin-bottom:0.7rem;
+                }
+            }
+
+            &::last-child {
+                margin-left: 54px;
+            }
+
+            @include lg {
+                width:70px;
+            }
+
+            @include sm {
+                width:44px;
+                height: 2px;
+            }
+        }
+
+        @include sm {
+            margin-bottom:0.8rem
+        }
+
+
+    }
+
+    @include lg {
         margin-left:40px
     }
-}
 
-@media screen and (max-width: 420px) {
-    .title {
+    @include sm {
         width:87.5%;
         margin: 0 6.25%;
         top: auto;
@@ -82,165 +137,66 @@
         transform: translate3d(0, 0, 0);
         bottom: 15rem;
     }
+
 }
 
-.title__text {
-    font-size: 12rem;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.6rem;
-    font-family: "futura_m";
-    font-weight: normal;
-    text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
-}
+.main-title {
+    margin-left: 25%;
 
-.main-title__text {
-    text-align: center;
-    font-size: 5rem;
-    text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
-    color: #fff;
-    padding: 40px 0;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    overflow: hidden;
-
-    .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .title__text {
-        font-size:7.6rem
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .title__text {
-        font-size: 6.8rem;
-        margin-bottom: 0.8rem;
+    &__text {
+        text-align: center;
+        font-size: 5rem;
         text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
+        color: #fff;
+        padding: 40px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        overflow: hidden;
+    
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+
     }
-}
 
-.title .border {
-    display: inline-block;
-    margin-bottom: 3.2rem
-}
-
-@media screen and (max-width: 420px) {
-    .title .border {
-        margin-bottom:0.8rem
+    @include sm {
+        width: 80%;
+        height: 55.633%;
+        margin: 0 10%;
+        top: 5%;
+        position: fixed;
     }
-}
 
-.title .border span {
-    display: block;
-    width: 88px;
-    height: 4px;
-    border-radius: 5px;
-    background: #fff55a
-}
-
-.title .border span:first-child {
-    margin-bottom: 1.4rem
-}
-
-@media screen and (max-width: 420px) {
-    .title .border span:first-child {
-        margin-bottom:0.7rem
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .title .border span {
-        width:70px
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .title .border span {
-        width:44px;
-        height: 2px
-    }
-}
-
-.title .border span:last-child {
-    margin-left: 54px
-}
-
-@media screen and (max-width: 800px) {
-    .title .border span:last-child {
-        margin-left:43px
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .title .border span:last-child {
-        margin-left:27px
-    }
 }
 
 .title__lead {
     color: #fff;
     font-size: 2.8rem;
     line-height: 1.5;
-    letter-spacing: 0.1em
-}
+    letter-spacing: 0.1em;
 
-@media screen and (max-width: 800px) {
-    .title__lead {
+    @include lg {
         font-size:2.4rem;
         line-height: 1.4
     }
-}
 
-@media screen and (max-width: 420px) {
-    .title__lead {
+    @include sm {
         font-size: 3rem;
     }
 }
 
-.title li {
-    margin-bottom: 1.6rem
-}
 
-@media screen and (max-width: 420px) {
-    .title li {
-        margin-bottom:0.8rem;
-        line-height: 1.1
-    }
-}
-
-.title li:last-child {
-    margin-bottom: 0
-}
-
-.title li:last-child a {
-    margin-right: 3.2rem
-}
-
-@media screen and (max-width: 420px) {
-    .title li:last-child a {
-        margin-right:1.6rem
-    }
-}
-
-.title li:last-child a:last-child {
-    margin-right: 0
-}
-
-.title li a {
-    color: #fff;
-    font-size: 2.8rem;
-    line-height: 1.5;
-    letter-spacing: 0.1em;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s
-}
+// .title li a {
+//     color: #fff;
+//     font-size: 2.8rem;
+//     line-height: 1.5;
+//     letter-spacing: 0.1em;
+//     -webkit-transition: 0.3s;
+//     -o-transition: 0.3s;
+//     transition: 0.3s
+// }
 
 @media screen and (max-width: 800px) {
     .title li a {
@@ -267,21 +223,48 @@
     height: 74.81%;
     margin: 0 8% 0 auto;
     -webkit-box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6)
-}
+    box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
 
-@media screen and (max-width: 800px) {
-    .image {
-        margin-right:40px
+    .page-num {
+        position: absolute;
+        overflow-y: hidden;
+        // right: -7.5490%;
+        right: 5%;
+        bottom: 12.3762%;
+        font-size: 15rem;
+        color: #fff;
+        font-family: "Abril Fatface";
+        z-index: 200;
+
+        p {
+            line-height: 1.1;
+            text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px; 
+    
+            @include sm {
+                text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
+            }
+
+        }
+
+        @include lg {
+            font-size:7.5rem;
+            right: 5%;
+        }
+
+        @include sm {
+            display:none;
+        }
     }
-}
 
-@media screen and (max-width: 420px) {
-    .image {
+    @include lg {
+        margin-right:40px;
+    }
+
+    @include sm {
         width:80%;
         height: 55.633%;
         margin: 0 10%;
-        top: 9.859%
+        top: 9.859%;
     }
 }
 
@@ -322,93 +305,47 @@
     background-size: cover
 }
 
-.image .page-num {
-    position: absolute;
-    overflow-y: hidden;
-    // right: -7.5490%;
-    right: 5%;
-    bottom: 12.3762%;
-    font-size: 15rem;
-    color: #fff;
-    font-family: "Abril Fatface";
-    z-index: 200
-}
-
-@media screen and (max-width: 800px) {
-    .image .page-num {
-        font-size:7.5rem;
-        right: 5%
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .image .page-num {
-        display:none
-    }
-}
-
-.image .page-num p {
-    line-height: 1.1;
-    text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
-}
-
-@media screen and (max-width: 420px) {
-    .image .page-num p {    
-        text-shadow: transparent 0px 0px 0px, rgba(1,1,1, .85) 1px 2px 5px;
-    }
-}
-
-
-
-.btn {
-    display: inline-block;
-    font-size: 1.8rem;
-    color: grey;
-    background: #fff55a;
-    line-height: 1;
-    font-weight: bold;
-    padding: 18px 32px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    letter-spacing: 0.1em
-}
-
-@media screen and (max-width: 800px) {
-    .btn {
-        font-size:1.8rem;
-        padding: 13px 24px
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .btn {
-        font-size:1.2rem
-    }
-}
-
-.btn:hover {
-    -webkit-transform: translate3d(0, -5%, 0);
-    transform: translate3d(0, -5%, 0);
-    opacity: 1
-}
 
 .btn-wrap {
-    margin-top: 3.2rem
-}
+    margin-top: 3.2rem;
 
-@media screen and (max-width: 800px) {
-    .btn-wrap {
-        margin-top:1.6rem
+    .btn {
+        display: inline-block;
+        font-size: 1.8rem;
+        color: grey;
+        background: #fff55a;
+        line-height: 1;
+        font-weight: bold;
+        padding: 18px 32px;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        letter-spacing: 0.1em;
+        
+        &:hover {
+            -webkit-transform: translate3d(0, -5%, 0);
+            transform: translate3d(0, -5%, 0);
+            opacity: .5;
+        }
+    
+        @include lg {
+            font-size:1.8rem;
+            padding: 13px 24px;
+        }
+    
+        @include sm {
+            font-size:1.2rem;
+        }
     }
-}
 
-@media screen and (max-width: 420px) {
-    .btn-wrap {
+    @include lg {
+        margin-top:1.6rem;
+    }
+
+    @include sm {
         text-align:center;
-        margin-top: 0.8rem
+        margin-top: 0.8rem;
     }
 }
-
 
 
