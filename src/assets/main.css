@@ -63,7 +63,7 @@ li {
   list-style-type: none; }
 
 a {
-  color: #072142;
+  color: #fff;
   text-decoration: none; }
 
 a:hover {
@@ -141,7 +141,7 @@ img {
     top: auto;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    bottom: 8rem; } }
+    bottom: 15rem; } }
 
 .title__text {
   font-size: 12rem;
@@ -172,7 +172,7 @@ img {
 
 @media screen and (max-width: 420px) {
   .title__text {
-    font-size: 3.8rem;
+    font-size: 6.8rem;
     margin-bottom: 0.8rem;
     text-shadow: transparent 0px 0px 0px, rgba(1, 1, 1, 0.85) 1px 2px 5px; } }
 
@@ -231,7 +231,7 @@ img {
 
 @media screen and (max-width: 420px) {
   .title__lead {
-    font-size: 1.2rem; } }
+    font-size: 3rem; } }
 
 .title li {
   margin-bottom: 1.6rem; }
@@ -270,7 +270,7 @@ img {
 
 @media screen and (max-width: 420px) {
   .title li a {
-    font-size: 1.2rem; } }
+    font-size: 3rem; } }
 
 .title li a:hover {
   opacity: 0.5; }
@@ -315,21 +315,21 @@ img {
   background: #072142; }
 
 .image--works {
-  background: url("././img/reile.jpg") no-repeat center;
+  background: url("././img/work-me.jpg") no-repeat center;
   background-size: cover; }
 
 .image--about {
-  background: url("././img/about.jpg") no-repeat center;
+  background: url("././img/about-me.jpg") no-repeat center;
   background-size: cover; }
 
 .image--contact {
-  background: url("././img/contact.jpg") no-repeat center;
+  background: url("././img/let-connect.jpg") no-repeat center;
   background-size: cover; }
 
 .image .page-num {
   position: absolute;
   overflow-y: hidden;
-  right: -7.5490%;
+  right: 5%;
   bottom: 12.3762%;
   font-size: 15rem;
   color: #fff;
@@ -339,7 +339,7 @@ img {
 @media screen and (max-width: 800px) {
   .image .page-num {
     font-size: 7.5rem;
-    right: -5%; } }
+    right: 5%; } }
 
 @media screen and (max-width: 420px) {
   .image .page-num {

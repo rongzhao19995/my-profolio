@@ -40,9 +40,21 @@ export const Header = () => {
             </div>
             <div className="right">
                 <div className="social-media">
-                    <div className="wrapper"><FaLinkedin size={20} /></div>
-                    <div className="wrapper"><FaGithub size={20}/></div>
-                    <div className="wrapper"><GrMail size={20}/></div>
+                    <div className="wrapper">
+                        <a href="https://www.linkedin.com/in/lee-rong-zhao-07033977/" target="_blank" rel="noreferrer">
+                        <FaLinkedin size={20} />
+                        </a>                        
+                    </div>
+                    <div className="wrapper">
+                        <a href="https://github.com/rongzhao19995" target="_blank" rel="noreferrer">
+                            <FaGithub size={20}/>
+                        </a>
+                    </div>
+                    <div className="wrapper">
+                        <a  href="mailto:rongzhao195@gmail.com">
+                            <GrMail size={20}/>
+                        </a>
+                    </div>
                 </div>
                 <div className="wrapper"><GiHamburgerMenu size={40}/></div>
             </div>
