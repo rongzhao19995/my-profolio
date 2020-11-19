@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  Link
+} from "react-router-dom";
 
 export const SectionTwo = () => {
   return (
@@ -8,20 +11,18 @@ export const SectionTwo = () => {
           <h2 className="title__text js-letter">My Work</h2>
           <p className="title__lead js-letter">website</p>
           <div className="btn-wrap js-letter">
-            <a className="btn" href="./reile.html">
-              Show me more
-            </a>
+            <Link className="btn" to="/work">Show me more</Link>
           </div>
         </div>
-        <a className="image image--works" href="/reile.html">
-          <div className="image__over">
+        <Link className="image image--works" to="/work">
+        <div className="image__over">
             <div className="image__cover"></div>
             <div className="image__cover"></div>
           </div>
           <div className="page-num">
             <p> I </p>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,77 +1,67 @@
-.header {
-    position:fixed;
-    width:100%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding:3.5rem;
-    padding-top:1rem;
-    z-index: 9999;
-
-    .left {
-
-        .name {
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            opacity: 0;
-
-            &:hover {
-                opacity: .4 !important;
-            }
-
-        }
-
-    }
-
-    .right {
-        display: flex;
+.fullpage-header {
+    .header {
+        position:fixed;
+        width:100%;
+        display:flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        .social-media {
-            display:flex;
+        padding:3.5rem;
+        padding-top:1rem;
+        z-index: 9999;
+    
+        .left {
+    
+            .name {
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+                opacity: 0;
+    
+                &:hover {
+                    opacity: .4 !important;
+                }
+    
+            }
+    
+        }
+    
+        .right {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
-            padding-right: 4rem;
-
-
-            @include lg {
+    
+            .social-media {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                padding-right: 4rem;
+    
+    
+                @include lg {
+                }
+                @include md {
+                }
+                @include sm {
+                display:none;
+                }
             }
-            @include md {
+    
+            .wrapper {
+                margin:1rem;
+                color: white;
+                cursor: pointer;
+                opacity: 0;
+    
+                &:hover {
+                    opacity: .4 !important;
+                }
             }
-            @include sm {
-            display:none;
-            }
+            
         }
-
-        .wrapper {
-            margin:1rem;
-            color: white;
-            cursor: pointer;
-            opacity: 0;
-
-            &:hover {
-                opacity: .4 !important;
-            }
-        }
-        
     }
-}
-
-.loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #020b16;
-    top: 0;
-    left: 0;
-
-    &.js-hidden {
-        display: none
-    }
+    
 }

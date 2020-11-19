@@ -1,0 +1,27 @@
+<svg version="1.1" id="svg-services-development" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+<polygon fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	83,77 50,77 50.1,61 83.1,61 "></polygon>
+<polygon fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	83,106 50,106 50.1,90 83.1,90 "></polygon>
+<polygon fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	129.9,106 97,106 97.1,90 130,90 "></polygon>
+<polygon fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	77.1,36.5 66.6,46.9 56.1,36.5 66.6,26 "></polygon>
+<line fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="67" y1="46" x2="67" y2="60"></line>
+<polyline fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	48,69 26,69 26,98 49,98 "></polyline>
+<line fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="84" y1="98" x2="97" y2="98"></line>
+<line fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="84" y1="69" x2="96" y2="69"></line>
+<g>
+	<path fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M110,69.5c0,3.6-2.9,6.5-6.5,6.5S97,73.1,97,69.5s2.9-6.5,6.5-6.5S110,65.9,110,69.5z"></path>
+</g>
+<line fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="67" y1="107" x2="67" y2="119"></line>
+<g>
+	<path fill="none" stroke="#0085A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M66.5,133c-3.6,0-6.5-2.9-6.5-6.5s2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5S70.1,133,66.5,133z"></path>
+</g>
+<line fill="none" stroke="#B2DAE3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="60" y1="69" x2="73" y2="69"></line>
+<line fill="none" stroke="#B2DAE3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="60" y1="98" x2="73" y2="98"></line>
+<line fill="none" stroke="#B2DAE3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="107" y1="98" x2="121" y2="98"></line>
+</svg>

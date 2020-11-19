@@ -5,7 +5,7 @@ export const SectionFour = () => {
     <div>
       <div className="fullpage__slide">
         <div className="title">
-          <h2 className="title__text js-letter">Lets Connect Together</h2>
+          <h2 className="title__text js-letter">Lets Connect<br/>Together</h2>
           <ul>
             <li className="js-letter">
               <a href="mailto:rongzhao195@gmail.com">rongzhao195@gmail.com</a>

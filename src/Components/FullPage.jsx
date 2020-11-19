@@ -43,7 +43,7 @@ export const Fullpage = () => {
         .add(
           {
             targets: "#fp-nav",
-            translateY: [-300, -50],
+            translateY: ["-300", "-70"],
             easing: "easeOutExpo",
             duration: 500,
             opacity: [0, 1],
@@ -84,7 +84,7 @@ export const Fullpage = () => {
         .add(
           {
             targets: "#fp-nav",
-            translateY: [-50, -300],
+            translateY: ["-70", "-300"],
             easing: "easeOutExpo",
             duration: 500,
             opacity: [1, 0],
@@ -142,10 +142,11 @@ export const Fullpage = () => {
     });
     anime({
       targets: nextClass + " .page-num p",
-      translateY: ["100%", 0],
+      translateX: ["-200%", 0],
       translateZ: 0,
       easing: "easeInOutCubic",
-      duration: 1e3,
+      delay: 200,
+      duration: 1000,
     });
     anime({
       targets: nextClass + " .js-letter",

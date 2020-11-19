@@ -1,28 +1,12 @@
 @charset "UTF-8";a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline
 }
 
 html {
-    background:url('././img/horizon-what.jpg');
-    font-size: 62.5%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    
-    // @include lg {
-    //     font-size: 58%;
-    // }
-    // @include md {
-    //     font-size: 52%;
-    // }
-    // @include sm {
-    //     font-size: 50%;
-    // }
+    // background:url('././img/horizon-what.jpg');
+    background: rgb(252,101,66);
+    background: linear-gradient(90deg, rgba(252,101,66,1) 0%, rgba(253,99,65,1) 35%, rgba(247,87,57,1) 100%);
 }
 
 *,:after,:before {
@@ -35,18 +19,6 @@ body {
     color: #828c96;
     overflow-x: hidden;
 }
-
-h1,h2,h3,h4,h5,h6 {
-    line-height: 1.2
-}
-
-
-p {
-    line-height: 2;
-    word-wrap: break-word;
-    white-space: normal
-}
-
 
 li {
     list-style-type: none

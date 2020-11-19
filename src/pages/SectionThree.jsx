@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  Link
+} from "react-router-dom";
 
 export const SectionThree = () => {
   return (
@@ -12,20 +15,18 @@ export const SectionThree = () => {
             and Beauty Things.
           </p>
           <div className="btn-wrap js-letter">
-            <a className="btn" href="./about.html">
-              Show me more
-            </a>
+          <Link className="btn" to="/about">Show me more</Link>
           </div>
         </div>
-        <a className="image image--about" href="./about.html">
+        <Link className="image image--about" to="/about-me">
           <div className="image__over">
-            <div className="image__cover"></div>
-            <div className="image__cover"></div>
-          </div>
-          <div className="page-num">
-            <p> II </p>
-          </div>
-        </a>
+              <div className="image__cover"></div>
+              <div className="image__cover"></div>
+            </div>
+            <div className="page-num">
+              <p> II </p>
+            </div>
+        </Link>
       </div>
     </div>
   );

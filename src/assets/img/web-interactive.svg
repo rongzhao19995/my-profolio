@@ -1,0 +1,16 @@
+<svg version="1.1" id="svg-services-design" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+<g>
+	<path fill="none" stroke="#0085A1" stroke-width="4" stroke-miterlimit="10" d="M120,110c0,2.2-1.8,4-4,4H35c-2.2,0-4-1.8-4-4V42
+		c0-2.2,1.8-4,4-4h81c2.2,0,4,1.8,4,4V110z"></path>
+</g>
+<rect x="38" y="63" fill="#0085A1" width="30" height="44"></rect>
+<g>
+	<path fill="none" stroke="#0085A1" stroke-width="3" stroke-miterlimit="10" d="M48.5,51c0,2.5-2,4.5-4.5,4.5c-2.5,0-4.5-2-4.5-4.5
+		s2-4.5,4.5-4.5C46.5,46.5,48.5,48.5,48.5,51z"></path>
+</g>
+<rect x="74" y="63" fill="#0085A1" width="39" height="19"></rect>
+<rect x="74" y="89" fill="#0085A1" width="16" height="18"></rect>
+<path fill="none" stroke="#0085A1" stroke-width="3" stroke-miterlimit="10" d="M111.5,54c0,0.3-0.2,0.5-0.5,0.5H58
+	c-0.3,0-0.5-0.2-0.5-0.5v-6c0-0.3,0.2-0.5,0.5-0.5h53c0.3,0,0.5,0.2,0.5,0.5V54z"></path>
+<rect x="96" y="89" fill="#0085A1" width="17" height="18"></rect>
+</svg>
