@@ -2,12 +2,17 @@ import React, { useRef, useEffect } from "react";
 import { useIntersection } from "react-use";
 import anime from "animejs/lib/anime.es.js";
 
+import { BackButton } from "../Components/BackButton";
+
 import ImgOne from "../assets/img/work-1.png";
 import ImgTwo from "../assets/img/work-2.png";
 import ImgThree from "../assets/img/work-3.png";
 import ImgFour from "../assets/img/work-4.png";
 import ImgFive from "../assets/img/work-5.png";
 import ImgSix from "../assets/img/work-6.png";
+import { Loader } from "../Components/Loader";
+
+
 
 const SectionOne = () => {
   return (
@@ -451,7 +456,7 @@ const SectionSix = () => {
           </div>
           <ul className="tech-stack-detail">
             <li className="text js-fade">HTML (HTML5)</li>
-            <li className="text js-fade">CSS (SCSS, Boostrap, Grid, Flexbox)</li>
+            <li className="text js-fade">CSS (SCSS, Boostrap, Grid, Flexbox, Parallax)</li>
             <li className="text js-fade">JavaScript/ TypeScript (ReactJs)</li>
             <li className="text js-fade">JavaScript Libaries (Gsap, AnimeJs)</li>
           </ul>
@@ -512,13 +517,23 @@ export const Work = () => {
       )
       .add(
         {
+          targets: ".back-wrapper",
+          opacity: [0,1],
+          // translateZ: 0,
+          easing: "easeInOutCubic",
+          duration: 500,
+        },
+        "-=3000"
+      )
+      .add(
+        {
           targets: ".scrollDown",
           translateY: ["500%", 0],
           translateZ: 0,
           easing: "easeInOutCubic",
           duration: 500,
         },
-        "-=1700"
+        "-=3500"
       );
 
     return () => {
@@ -528,9 +543,11 @@ export const Work = () => {
 
   return (
     <div className="work-page">
-      <div className="loader"></div>
+      <Loader/>
+      <BackButton backPage="works"/>
       <div class="container">
-        <div class="header"></div>
+        {/* <div class="header">
+        </div> */}
         <div class="left-content"></div>
         <div class="main-content">
           <SectionOne />

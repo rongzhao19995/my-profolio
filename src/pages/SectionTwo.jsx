@@ -9,7 +9,7 @@ export const SectionTwo = () => {
       <div className="fullpage__slide">
         <div className="title">
           <h2 className="title__text js-letter">My Work</h2>
-          <p className="title__lead js-letter">website</p>
+          <p className="title__lead js-letter">Web Application, <br/>Landing Page, UI Clone</p>
           <div className="btn-wrap js-letter">
             <Link className="btn" to="/work">Show me more</Link>
           </div>

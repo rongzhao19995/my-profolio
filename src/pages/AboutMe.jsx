@@ -2,10 +2,13 @@ import React, { useRef, useEffect } from "react";
 import { useIntersection } from "react-use";
 import anime from "animejs/lib/anime.es.js";
 
+import { BackButton } from "../Components/BackButton";
+
 import ImgOne from "../assets/img/me-1.jpg";
 import ImgTwo from "../assets/img/me-2.jpg";
 import ImgThree from "../assets/img/me-3.jpg";
 import ImgFour from "../assets/img/me-4.jpg";
+import { Loader } from "../Components/Loader";
 
 const SectionOne = () => {
   const sectionRef = useRef(null);
@@ -251,6 +254,7 @@ const SectionThree = () => {
     </div>
   );
 };
+
 export const AboutMe = () => {
   useEffect(() => {
     anime
@@ -287,6 +291,16 @@ export const AboutMe = () => {
       )
       .add(
         {
+          targets: ".back-wrapper",
+          opacity: [0, 1],
+          // translateZ: 0,
+          easing: "easeInOutCubic",
+          duration: 500,
+        },
+        "-=1500"
+      )
+      .add(
+        {
           targets: ".scrollDown",
           translateY: ["500%", 0],
           translateZ: 0,
@@ -303,7 +317,8 @@ export const AboutMe = () => {
 
   return (
     <div className="about-page">
-      <div className="loader"></div>
+      <Loader/>
+      <BackButton backPage="about" />
       <div class="container">
         <div class="header"></div>
         <div class="left-content"></div>

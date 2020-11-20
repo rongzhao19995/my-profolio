@@ -147,3 +147,17 @@
     }
 }
 
+
+.back-wrapper {
+    position:fixed;
+    top: 0;
+    left: 1%;
+    color:$yellow;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        transform: translateX(10px);
+        opacity: .4 !important;
+    }
+}

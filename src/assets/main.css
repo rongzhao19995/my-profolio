@@ -180,7 +180,7 @@ img {
       width: 80%;
       height: 55.633%;
       margin: 0 10%;
-      top: 5%;
+      top: 2%;
       position: fixed; } }
 
 .title__lead {
@@ -503,6 +503,17 @@ img {
   left: 0; }
   .loader.js-hidden {
     display: none; }
+
+.back-wrapper {
+  position: fixed;
+  top: 0;
+  left: 1%;
+  color: #fff55a;
+  cursor: pointer;
+  transition: 0.5s; }
+  .back-wrapper:hover {
+    transform: translateX(10px);
+    opacity: .4 !important; }
 
 .fullpage-header .header {
   position: fixed;

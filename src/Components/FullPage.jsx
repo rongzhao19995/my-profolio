@@ -187,7 +187,7 @@ export const Fullpage = () => {
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */
-      anchors={["home", "reile", "about", "contact"]}
+      anchors={["home", "works", "about", "contact"]}
       easingcss3={"cubic-bezier(0.645, 0.045, 0.355, 1)"}
       navigation={"!0"}
       navigationPosition={"left"}
