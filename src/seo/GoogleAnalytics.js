@@ -52,7 +52,6 @@ const RouteTracker = () => <Route component={GoogleAnalytics} />;
 
 const init = (options = {}) => {
   const isGAEnabled = process.env.NODE_ENV === "production";
-debugger;
   if (isGAEnabled) {
     ReactGA.initialize("G-WMG033N2XN");
     console.log('ReactGA is initialze');
