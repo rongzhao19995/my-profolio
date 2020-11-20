@@ -11,7 +11,7 @@ export const SectionFour = () => {
               <a href="mailto:rongzhao195@gmail.com">rongzhao195@gmail.com</a>
             </li>
             <li className="js-letter">
-              <a href="https://github.com/rongzhao19995" target="_blank">
+              <a href="https://github.com/rongzhao19995" target="_blank" rel="noreferrer">
                 GitHub
               </a>
             </li>
