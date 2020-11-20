@@ -6,7 +6,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding:3.5rem;
+        padding:2.5rem;
         padding-top:1rem;
         z-index: 9999;
     
@@ -56,11 +56,19 @@
                 cursor: pointer;
                 opacity: 0;
     
+                @include sm {
+                    margin:0;
+                }
+
                 &:hover {
                     opacity: .4 !important;
                 }
             }
             
+        }
+
+        @include sm {
+            padding:2.25rem;
         }
     }
     

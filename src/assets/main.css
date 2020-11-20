@@ -522,7 +522,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 3.5rem;
+  padding: 2.5rem;
   padding-top: 1rem;
   z-index: 9999; }
   .fullpage-header .header .left .name {
@@ -552,8 +552,14 @@ img {
       color: white;
       cursor: pointer;
       opacity: 0; }
+      @media (max-width: 596px) {
+        .fullpage-header .header .right .wrapper {
+          margin: 0; } }
       .fullpage-header .header .right .wrapper:hover {
         opacity: .4 !important; }
+  @media (max-width: 596px) {
+    .fullpage-header .header {
+      padding: 2.25rem; } }
 
 .about-page .container {
   display: grid;
@@ -757,12 +763,15 @@ img {
           right: 0;
           bottom: 0;
           left: 0; }
+  @media (max-width: 596px) {
+    .about-page .ep-1-section {
+      height: 100%; } }
 
 .about-page .job-exp-section {
   opacity: 0; }
   @media (max-width: 596px) {
     .about-page .job-exp-section {
-      padding-top: 3rem; } }
+      margin-top: 10rem; } }
   .about-page .job-exp-section .about-job-detail {
     padding-top: 2rem; }
     .about-page .job-exp-section .about-job-detail .job-exp {

@@ -283,6 +283,10 @@
 
 
         }
+
+        @include sm {
+            height: 100%;
+        }
     }
 
     .job-exp-section {
@@ -290,7 +294,7 @@
         opacity:0;
 
         @include sm {
-            padding-top:3rem;
+            margin-top:10rem;
         }
 
         .about-job-detail {
