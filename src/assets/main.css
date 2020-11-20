@@ -771,7 +771,7 @@ img {
   opacity: 0; }
   @media (max-width: 596px) {
     .about-page .job-exp-section {
-      margin-top: 10rem; } }
+      margin-top: 3rem; } }
   .about-page .job-exp-section .about-job-detail {
     padding-top: 2rem; }
     .about-page .job-exp-section .about-job-detail .job-exp {
