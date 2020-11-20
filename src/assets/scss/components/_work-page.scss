@@ -1,0 +1,245 @@
+.work-page {
+
+
+    /// common use ///
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        .header {
+            grid-column: span 12;
+        }
+        .left-content {
+            grid-column: span 2;
+
+            @include sm {
+                grid-column: span 1;
+            }
+        }
+        .main-content {
+            grid-column: span 8;
+
+            @include sm {
+                grid-column: span 10;
+            }
+        }
+        .right-content {
+            grid-column: span 2;
+
+            @include sm {
+                grid-column: span 1;
+            }
+        }
+        .footer {
+            grid-column: span 12;
+        }
+
+    }
+
+    .text {
+        color:$white;
+        font-family: "futura_m";
+        font-weight: normal;
+    
+    }
+
+    .sh-text {
+        color:$white;
+        font-family: "futura_m";
+        font-weight: normal;
+        text-shadow: transparent 0px 0px 0px, rgba(1, 1, 1, 0.85) 1px 2px 5px;
+
+    }       
+
+    .numbered-heading {
+        font-size:1.8rem;
+        display: flex;
+        align-items: center;
+
+        &.left {
+
+            &::before {
+                position: relative;
+                counter-increment: section 1;
+                content: attr(data-before-content);
+                margin-right: 1rem;
+                color: $yellow;
+                font-weight: 400;
+            }
+    
+            &::after {
+                content: "";
+                flex: 1;
+                margin-left: 1rem;
+                height: 1px;
+                background-color: #000;              
+                margin-left: 20px;
+                background-color: $yellow;
+                max-width:800px;
+    
+            }
+
+        }
+
+        &.right {
+
+            &::before {
+                content: "";
+                flex: 1;
+                margin-right: 1rem;
+                
+                height: 1px;
+                background-color: #000;              
+                margin-left: 20px;
+                background-color: $yellow;
+                max-width:800px;
+            }
+    
+            &::after {
+                position: relative;
+                counter-increment: section 1;
+                content: attr(data-before-content);
+                margin-left: 1rem;
+                color: $yellow;
+                font-weight: 400;
+    
+            }
+            
+        }
+
+        
+    }
+
+    /// end of common use ///
+
+
+    .work-section {
+        padding-top:8rem;
+        height: 100vh;
+
+        .image-container {
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 70%;
+            margin: 0 8% 0 auto;
+            right: 0;
+            overflow: hidden;
+            background-color:black;
+            box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+
+            img {
+                filter: brightness(50%)
+            }
+
+            @include sm {
+                display: block;
+                position: absolute;
+                width: 85vw;
+                height: auto;
+            }
+        }
+    
+        .text-wrapper {
+            
+
+            ul {
+                padding: 1.5rem;
+                list-style-type: none;
+                
+
+                li {                        
+                    opacity: 0;
+
+                    &::before {
+                        content: "\21FE";  
+                        font-weight: bold; 
+                        display: inline-block; 
+                        width: 1em; 
+                        margin-left: -1em;
+                        color:$yellow;
+                    }
+    
+                }
+            }
+
+            .batch-wrapper {
+
+                .batch{
+                    display: inline-block;
+                    font-size: 1rem;
+                    color: rgb(252,101,66);
+                    background: #fff55a;
+                    line-height: 1;
+                    font-weight: bold;
+                    padding: 18px 32px;
+                    transition: .5s;
+                    letter-spacing: 0.1em;
+                }
+            }
+
+            @include sm {
+                padding-top: 15rem;
+            }
+        }
+
+        .text-container {
+            overflow: hidden;
+        }
+
+
+
+        .sm-header {
+            font-size:2rem;
+            color:$yellow;
+            padding-bottom:1.5rem;
+
+            @include sm {
+                font-size:1rem;
+            }
+        }
+
+        .lg-header {
+            font-size: 5rem;
+
+            @include sm {
+                font-size:3rem;
+            }
+        }
+
+        .wave {
+            cursor: pointer;
+            animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+            animation-duration: 2.5s;        /* Change to speed up or slow down */
+            animation-iteration-count: infinite;  /* Never stop waving :) */
+            transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+            display: inline-block;
+        }
+
+        @keyframes wave-animation {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+          100% { transform: rotate( 0.0deg) }
+        }
+
+        .md-description {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: $gray-300;
+            max-width: 500px;
+            padding-top:1.5rem;
+
+            @include sm {
+                font-size:1rem;
+                line-height: 1.5rem;
+            }
+        }
+
+    }
+
+}

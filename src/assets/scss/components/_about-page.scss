@@ -1,5 +1,6 @@
 .about-page {
 
+    /// common use ///
     .container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -48,6 +49,68 @@
         text-shadow: transparent 0px 0px 0px, rgba(1, 1, 1, 0.85) 1px 2px 5px;
 
     }       
+
+    .numbered-heading {
+        font-size:1.8rem;
+        display: flex;
+        align-items: center;
+
+        &.left {
+
+            &::before {
+                position: relative;
+                counter-increment: section 1;
+                content: attr(data-before-content);
+                margin-right: 1rem;
+                color: $yellow;
+                font-weight: 400;
+            }
+    
+            &::after {
+                content: "";
+                flex: 1;
+                margin-left: 1rem;
+                height: 1px;
+                background-color: #000;              
+                margin-left: 20px;
+                background-color: $yellow;
+                max-width:800px;
+    
+            }
+
+        }
+
+        &.right {
+
+            &::before {
+                content: "";
+                flex: 1;
+                margin-right: 1rem;
+                
+                height: 1px;
+                background-color: #000;              
+                margin-left: 20px;
+                background-color: $yellow;
+                max-width:800px;
+            }
+    
+            &::after {
+                position: relative;
+                counter-increment: section 1;
+                content: attr(data-before-content);
+                margin-left: 1rem;
+                color: $yellow;
+                font-weight: 400;
+    
+            }
+            
+        }
+
+        
+    }
+
+    /// end of common use ///
+
 
     .whoami-section {
         padding-top:8rem;
@@ -113,35 +176,7 @@
     .ep-1-section {
         // padding-top:8rem;
         height: 100vh;
-
-
-        .numbered-heading {
-            font-size:1.8rem;
-            display: flex;
-            align-items: center;
-
-            &::before {
-                position: relative;
-                counter-increment: section 1;
-                content: "I.";
-                margin-right: 1rem;
-                color: $yellow;
-                font-weight: 400;
-            }
-
-            &::after {
-                content: "";
-                flex: 1;
-                margin-left: 1rem;
-                height: 1px;
-                background-color: #000;              
-                margin-left: 20px;
-                background-color: $yellow;
-                max-width:800px;
-
-            }
-            
-        }
+        opacity:0;
 
         .about-me-detail {
             display: grid;
@@ -250,37 +285,12 @@
         }
     }
 
-    .tech-stack-section {
-        height: 100vh;
+    .job-exp-section {
+        // height: 100vh;
+        opacity:0;
 
-
-        .numbered-heading {
-            font-size:1.8rem;
-            display: flex;
-            align-items: center;
-
-            &::before {
-                position: relative;
-                counter-increment: section 1;
-                content: "II.";
-                margin-right: 1rem;
-                color: $yellow;
-                font-weight: 400;
-            }
-
-            &::after {
-                content: "";
-                flex: 1;
-                margin-left: 1rem;
-                height: 1px;
-                background-color: #000;              
-                margin-left: 20px;
-                background-color: $yellow;
-                max-width:800px;
-
-            }
-            
-
+        @include sm {
+            padding-top:3rem;
         }
 
         .about-job-detail {
@@ -325,17 +335,18 @@
                 ul {
                     padding: 1.5rem;
                     list-style-type: none;
-                    li {
-                        
+                    
+                    li {                        
 
                         &::before {
-                            content: "\21FE";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                            font-weight: bold; /* If you want it to be bold */
-                            display: inline-block; /* Needed to add space between the bullet and the text */
-                            width: 1em; /* Also needed for space (tweak if needed) */
-                            margin-left: -1em; /* Also needed for space (tweak if needed) */
+                            content: "\21FE";  
+                            font-weight: bold; 
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em;
                             color:$yellow;
                         }
+
                     }
                 }
                 
@@ -357,7 +368,88 @@
 
         }
 
+    }
+
+    .study-exp-section {
+        height: 100vh;
+        padding-top:3rem;
+        opacity:0;
+
+        .about-study-detail {
+            padding-top:2rem;
+            // display:grid;
+            // grid-template-columns: repeat(6, 1fr);
+
+            .study-exp {
+                padding-bottom:2rem;
 
 
+                .duration {
+                    font-size: 1.7rem;
+                    padding-bottom:1rem;
+                }
+    
+
+                .school {
+                    font-size: 1.5rem;
+                    padding-bottom:1rem;
+                }
+
+                .study-title {
+                    font-size: 1.5rem;
+                    padding-bottom: 1rem;
+
+                    &::before {
+                        content:"\00a0\00a0\00a0\00a0\00a0";
+                        text-decoration:line-through;
+                        color:$yellow;
+                        margin-left: 20px;
+                        margin-right: 20px;
+
+                        @include sm {
+                            margin-left:0px;
+                        }
+
+                    }
+
+                }
+    
+                ul {
+                    padding: 1.5rem;
+                    list-style-type: none;
+                    
+                    li {                        
+
+                        &::before {
+                            content: "\21FE";  
+                            font-weight: bold; 
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em;
+                            color:$yellow;
+                        }
+
+                    }
+                }
+                
+                .text {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    color: $gray-300;
+                    padding-bottom:.5rem;
+                    // max-width:500px;
+        
+                    @include sm {
+                        font-size:1rem;
+                        line-height: 1.5rem;
+                    }
+        
+                }
+            }
+
+
+        }
+
+    
     }
 }
