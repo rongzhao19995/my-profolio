@@ -35,7 +35,7 @@ export const Header = () => {
       });
   }, []);
 
-  const closeMenu = () => {
+  const closeMenu = (routeToSlide) => {
     anime.timeline()
     .add({
       targets: ".global-nav ul li",
@@ -54,6 +54,12 @@ export const Header = () => {
     })
 
     setOpen(false);
+
+    setTimeout(() => {
+      window.fullpage_api.moveTo(routeToSlide);
+      console.log('This will run after 1 second!')
+    }, 1000);    
+
   }
 
   const openMenu = () => {
@@ -128,35 +134,12 @@ export const Header = () => {
       </header>
       <nav className="global-nav">
         <ul className="global-nav__list">
-          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-home-page-btn" to="/#home">HOME</Link></li></div>
-          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-works-page-btn" to="/#works">WORKS</Link></li></div>
-          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-about-page-btn" to="/#about">ABOUT ME</Link></li></div>
-          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-contact-page-btn" to="/#contact">CONTACT</Link></li></div>
-          
-          
-          
-          
+          <div className="text-container" onClick={() => closeMenu('home')}><li><Link className="btn gtm__view-home-page-btn" to="/#home">HOME</Link></li></div>
+          <div className="text-container" onClick={() => closeMenu('works')}><li><Link className="btn gtm__view-works-page-btn" to="/#works">WORKS</Link></li></div>
+          <div className="text-container" onClick={() => closeMenu('about')}><li><Link className="btn gtm__view-about-page-btn" to="/#about">ABOUT ME</Link></li></div>
+          <div className="text-container" onClick={() => closeMenu('contact')}><li><Link className="btn gtm__view-contact-page-btn" to="/#contact">CONTACT</Link></li></div>  
         </ul>
       </nav>
     </div>
   );
 };
-
-// {/* <header>
-// <a className="name" href="./">Kuon Yagi</a>
-// <div className="wrap">
-// <div className="icons"><a href="https://twitter.com/Goldi69s"><i className="fab fa-twitter"></i></a><a href="https://dribbble.com/kuon_yagi" target="_blank"><i className="fab fa-dribbble"></i></a><a href="https://www.wantedly.com/users/48483598" target="_blank">Wantedly</a></div>
-// <div className="menuIcon js-menuBtn"></div>
-// </div>
-// <nav className="global-nav">
-// <ul className="global-nav__list">
-// <li><a href="./">HOME</a></li>
-// <li><a href="./reile.html">WORKS</a></li>
-// <li><a href="./about.html">ABOUT ME</a></li>
-// <li><a className="js-contact" href="./#contact">CONTACT</a></li>
-// <li className="global-nav__sns"><a href="https://twitter.com/Goldi69s"><i className="fab fa-twitter"></i></a><a href="https://dribbble.com/kuon_yagi" target="_blank"><i className="fab fa-dribbble"></i></a></li>
-// </ul>
-// </nav>
-// <div className="curtain"></div>
-// <div className="loader"></div>
-// </header> */}
