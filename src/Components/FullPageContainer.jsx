@@ -8,8 +8,8 @@ export const FullPageContainer = () => {
     <div>
       <Header />
       <Fullpage />
-      <p class="scrollDown">SCROLLDOWN</p>
-      <div class="sky-color"></div>
+      <p className="scrollDown">SCROLLDOWN</p>
+      <div className="sky-color"></div>
     </div>
   );
 };

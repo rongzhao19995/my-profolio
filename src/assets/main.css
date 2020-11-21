@@ -561,6 +561,25 @@ img {
     .fullpage-header .header {
       padding: 2.25rem; } }
 
+.fullpage-header .global-nav {
+  background: #020b16;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0); }
+  .fullpage-header .global-nav .global-nav__list {
+    font-size: 7rem; }
+    @media (max-width: 992px) {
+      .fullpage-header .global-nav .global-nav__list {
+        font-size: 5rem; } }
+  .fullpage-header .global-nav .text-container {
+    overflow: hidden; }
+
 .about-page .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr); }

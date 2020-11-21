@@ -545,11 +545,11 @@ export const Work = () => {
     <div className="work-page">
       <Loader/>
       <BackButton backPage="works"/>
-      <div class="container">
-        {/* <div class="header">
+      <div className="container">
+        {/* <div className="header">
         </div> */}
-        <div class="left-content"></div>
-        <div class="main-content">
+        <div className="left-content"></div>
+        <div className="main-content">
           <SectionOne />
           <SectionTwo />
           <SectionThree />
@@ -557,10 +557,10 @@ export const Work = () => {
           <SectionFive />
           <SectionSix />
         </div>
-        <div class="right-content">
-          <p class="scrollDown">SCROLLDOWN</p>
+        <div className="right-content">
+          <p className="scrollDown">SCROLLDOWN</p>
         </div>
-        <div class="footer"></div>
+        <div className="footer"></div>
       </div>
     </div>
   );

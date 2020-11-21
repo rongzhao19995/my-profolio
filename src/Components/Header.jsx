@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
@@ -11,6 +11,7 @@ import {
 
 export const Header = () => {
   const elementRef = useRef();
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     anime
@@ -33,6 +34,59 @@ export const Header = () => {
         delay: (el, i) => 100 * (i + 1),
       });
   }, []);
+
+  const closeMenu = () => {
+    anime.timeline()
+    .add({
+      targets: ".global-nav ul li",
+      translateY: [0, "-100%"],
+      opacity: [1,0],
+      easing: "easeInOutQuad",
+      duration: 500,
+      delay: (el, i) => 100 * (i + 1)
+    })
+    .add({
+      targets: ".global-nav",
+      translateY: [0, "-100%"],
+      opacity: [1, 0],
+      easing: "easeInOutQuad",
+      duration: 500,
+    })
+
+    setOpen(false);
+  }
+
+  const openMenu = () => {
+
+    debugger;
+    if(isOpen) {
+      closeMenu();
+    } else {
+
+      anime.timeline()
+      .add({
+        targets: ".global-nav",
+        translateY: ["-100%", 0],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 500,
+      })
+      .add({
+        targets: ".global-nav ul li",
+        translateY: ["-100%", 0],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 800,
+        delay: (el, i) => 100 * (i + 1)
+      }, "-=500");
+
+      setOpen(true);
+
+  }
+
+
+
+}
 
   return (
     <div className="fullpage-header">
@@ -66,12 +120,24 @@ export const Header = () => {
               </a>
             </div>
           </div>
-          <div className="wrapper">
+          <div className="wrapper" onClick={openMenu}>
             <GiHamburgerMenu size={40} />
           </div>
         </div>
         <div className="loader" ref={elementRef}></div>
       </header>
+      <nav className="global-nav">
+        <ul className="global-nav__list">
+          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-home-page-btn" to="/#home">HOME</Link></li></div>
+          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-works-page-btn" to="/#works">WORKS</Link></li></div>
+          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-about-page-btn" to="/#about">ABOUT ME</Link></li></div>
+          <div className="text-container" onClick={closeMenu}><li><Link className="btn gtm__view-contact-page-btn" to="/#contact">CONTACT</Link></li></div>
+          
+          
+          
+          
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -11,10 +11,10 @@ export const SectionTwo = () => {
           <h2 className="title__text js-letter">My Work</h2>
           <p className="title__lead js-letter">Web Application, <br/>Landing Page, UI Clone</p>
           <div className="btn-wrap js-letter">
-            <Link className="btn gtm__view-work-page-btn" to="/work">Show me more</Link>
+            <Link className="btn gtm__view-work-page-btn" to="/works">Show me more</Link>
           </div>
         </div>
-        <Link className="image image--works gtm__view-work-page-btn" to="/work">
+        <Link className="image image--works gtm__view-work-page-btn" to="/works">
         <div className="image__over">
             <div className="image__cover"></div>
             <div className="image__cover"></div>

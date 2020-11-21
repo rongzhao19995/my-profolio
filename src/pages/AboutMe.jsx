@@ -72,7 +72,7 @@ const SectionOne = () => {
         </div>
         <div className="right">
           <div className="image-wrapper">
-            <div class="inner-box">
+            <div className="inner-box">
               <img src={ImgOne} alt="" />
               <img src={ImgTwo} alt="" />
               <img src={ImgThree} alt="" />
@@ -319,17 +319,17 @@ export const AboutMe = () => {
     <div className="about-page">
       <Loader/>
       <BackButton backPage="about" />
-      <div class="container">
-        <div class="header"></div>
-        <div class="left-content"></div>
-        <div class="main-content">
+      <div className="container">
+        <div className="header"></div>
+        <div className="left-content"></div>
+        <div className="main-content">
           <div className="whoami-section">
             <div className="text-container">
               <p className="sh-text sm-header js-text">Hi, My Name is</p>
             </div>
             <div className="text-container">
               <h1 className="sh-text lg-header js-text">
-                Lance Lee <span class="wave">👋</span>
+                Lance Lee <span className="wave">👋</span>
               </h1>
             </div>
             <div className="text-container">
@@ -349,10 +349,10 @@ export const AboutMe = () => {
           <SectionTwo />
           <SectionThree />
         </div>
-        <div class="right-content">
-          <p class="scrollDown">SCROLLDOWN</p>
+        <div className="right-content">
+          <p className="scrollDown">SCROLLDOWN</p>
         </div>
-        <div class="footer"></div>
+        <div className="footer"></div>
       </div>
     </div>
   );
