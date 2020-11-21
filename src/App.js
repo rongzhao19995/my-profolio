@@ -18,7 +18,7 @@ function App() {
       <Router>
         {/* { GA.init() && <GA.RouteTracker /> } */}
         <Switch>
-        <Route path="/about-me">
+        <Route path="/about">
             <AboutMe />
           </Route>
           <Route path="/work">

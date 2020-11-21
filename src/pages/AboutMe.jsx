@@ -4,10 +4,10 @@ import anime from "animejs/lib/anime.es.js";
 
 import { BackButton } from "../Components/BackButton";
 
-import ImgOne from "../assets/img/me-1.jpg";
-import ImgTwo from "../assets/img/me-2.jpg";
-import ImgThree from "../assets/img/me-3.jpg";
-import ImgFour from "../assets/img/me-4.jpg";
+import ImgOne from "../assets/img/me-1.webp";
+import ImgTwo from "../assets/img/me-2.webp";
+import ImgThree from "../assets/img/me-3.webp";
+import ImgFour from "../assets/img/me-4.webp";
 import { Loader } from "../Components/Loader";
 
 const SectionOne = () => {

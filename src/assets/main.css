@@ -274,15 +274,15 @@ img {
   background: #072142; }
 
 .image--works {
-  background: url("././img/work-me.jpg") no-repeat center;
+  background: url("././img/work-me.webp") no-repeat center;
   background-size: cover; }
 
 .image--about {
-  background: url("././img/about-me.jpg") no-repeat center;
+  background: url("././img/about-me.webp") no-repeat center;
   background-size: cover; }
 
 .image--contact {
-  background: url("././img/let-connect.jpg") no-repeat center;
+  background: url("././img/let-connect.webp") no-repeat center;
   background-size: cover; }
 
 .btn-wrap {
@@ -765,13 +765,10 @@ img {
           left: 0; }
   @media (max-width: 596px) {
     .about-page .ep-1-section {
-      height: 100%; } }
+      margin-bottom: 10rem; } }
 
 .about-page .job-exp-section {
   opacity: 0; }
-  @media (max-width: 596px) {
-    .about-page .job-exp-section {
-      margin-top: 3rem; } }
   .about-page .job-exp-section .about-job-detail {
     padding-top: 2rem; }
     .about-page .job-exp-section .about-job-detail .job-exp {

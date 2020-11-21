@@ -4,12 +4,12 @@ import anime from "animejs/lib/anime.es.js";
 
 import { BackButton } from "../Components/BackButton";
 
-import ImgOne from "../assets/img/work-1.png";
-import ImgTwo from "../assets/img/work-2.png";
-import ImgThree from "../assets/img/work-3.png";
-import ImgFour from "../assets/img/work-4.png";
-import ImgFive from "../assets/img/work-5.png";
-import ImgSix from "../assets/img/work-6.png";
+import ImgOne from "../assets/img/work-1.webp";
+import ImgTwo from "../assets/img/work-2.webp";
+import ImgThree from "../assets/img/work-3.webp";
+import ImgFour from "../assets/img/work-4.webp";
+import ImgFive from "../assets/img/work-5.webp";
+import ImgSix from "../assets/img/work-6.webp";
 import { Loader } from "../Components/Loader";
 
 
@@ -44,7 +44,7 @@ const SectionOne = () => {
           <li className="text js-fade">Javascript (AngularJs)</li>
         </ul>
         <div className="batch-wrapper">
-          <div className="batch">ENTERPRICE WORK</div>
+          <div className="batch">ENTERPRISE WORK</div>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@ const SectionTwo = () => {
           <li className="text js-fade">JavaScript/ TypeScript (AngularJs)</li>
         </ul>
         <div className="batch-wrapper">
-            <div className="batch">ENTERPRICE WORK</div>
+            <div className="batch">ENTERPRISE WORK</div>
         </div>
       </div>
     </div>
@@ -212,7 +212,7 @@ const SectionThree = () => {
           <li className="text js-fade">JavaScript/ TypeScript (AngularJs)</li>
         </ul>
         <div className="batch-wrapper">
-            <div className="batch">ENTERPRICE WORK</div>
+            <div className="batch">ENTERPRISE WORK</div>
         </div>
       </div>
     </div>

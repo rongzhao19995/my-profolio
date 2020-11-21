@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SectionThree = () => {
   return (
@@ -15,17 +13,20 @@ export const SectionThree = () => {
             and Beauty Things.
           </p>
           <div className="btn-wrap js-letter">
-          <Link className="btn" to="/about">Show me more</Link>
+            <Link className="btn gtm__view-about-page-btn" to="/about">
+              Show me more
+            </Link>
           </div>
         </div>
-        <Link className="image image--about" to="/about-me">
+        <Link className="image image--about gtm__view-about-page-btn"
+          to="/about">
           <div className="image__over">
-              <div className="image__cover"></div>
-              <div className="image__cover"></div>
-            </div>
-            <div className="page-num">
-              <p> II </p>
-            </div>
+            <div className="image__cover"></div>
+            <div className="image__cover"></div>
+          </div>
+          <div className="page-num">
+            <p> II </p>
+          </div>
         </Link>
       </div>
     </div>

@@ -4,6 +4,10 @@ import { FaGithub } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import anime from "animejs/lib/anime.es.js";
+import {
+  Link
+} from "react-router-dom";
+
 
 export const Header = () => {
   const elementRef = useRef();
@@ -34,12 +38,12 @@ export const Header = () => {
     <div className="fullpage-header">
       <header className="header">
         <div className="left">
-          <div className="name"> LANCE LEE </div>
+          <div className="name"><Link to="/" > LANCE LEE </Link></div>
         </div>
         <div className="right">
           <div className="social-media">
             <div className="wrapper">
-              <a
+              <a className="gtm__linkedin-btn"
                 href="https://www.linkedin.com/in/lee-rong-zhao-07033977/"
                 target="_blank"
                 rel="noreferrer"
@@ -48,7 +52,7 @@ export const Header = () => {
               </a>
             </div>
             <div className="wrapper">
-              <a
+              <a className="gtm__github-btn"
                 href="https://github.com/rongzhao19995"
                 target="_blank"
                 rel="noreferrer"
@@ -57,7 +61,7 @@ export const Header = () => {
               </a>
             </div>
             <div className="wrapper">
-              <a href="mailto:rongzhao195@gmail.com">
+              <a className="gtm__email-btn" href="mailto:rongzhao195@gmail.com">
                 <GrMail size={20} />
               </a>
             </div>
