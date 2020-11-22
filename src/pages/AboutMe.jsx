@@ -163,7 +163,7 @@ const SectionTwo = () => {
               Takaful.{" "}
             </li>
             <li className="text">
-              Communicate with B/C regarding the New Change Cequirement is
+              Communicate with B/C regarding the New Change Requirement is
               Durable in F/E Framework{" "}
             </li>
             <li className="text">
@@ -181,6 +181,127 @@ const SectionTwo = () => {
 };
 
 const SectionThree = () => {
+  const sectionRef2 = useRef(null);
+
+  const intersection2 = useIntersection(sectionRef2, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
+
+  // Animation for fading in
+  const fadeIn2 = (element) => {
+    anime.timeline().add({
+      targets: ".skill-exp-section",
+      //   translateY: ["50%", 0],
+      opacity: [0, 1],
+      translateZ: 0,
+      easing: "easeInOutCubic",
+      duration: 800,
+    });
+  };
+
+  // Animation for fading out
+  const fadeOut = (element) => {
+    // anime.timeline()
+    // .add({
+    //   targets: ".ep-1-section",
+    // //   translateY: ["50%", 0],
+    //   opacity: [1, 0],
+    //   translateZ: 0,
+    //   easing: "easeInOutCubic",
+    //   duration: 800
+    // })
+  };
+
+  // checking to see when the vieport is visible to the user
+  intersection2 && intersection2.intersectionRatio > 0.1
+    ? fadeIn2()
+    : fadeOut();
+
+  return (
+    <div className="skill-exp-section" ref={sectionRef2}>
+      <h1 className="numbered-heading left sh-text" data-before-content="III. ">
+        Tech I Use.
+      </h1>
+      <div className="about-skill-detail">
+        <div className="skill-exp">
+          <h1 className="header sh-text">HTML & CSS & Javascript / Typescript</h1>
+        </div>
+      </div>
+      <div className="language-list-detail">
+        <div className="left">
+          <ul>
+              <li className="text">
+                AngularJs
+              </li>
+              <li className="text">
+                ReactJs
+              </li>
+              <li className="text">
+                Redux
+              </li>
+              <li className="text">
+                SCSS
+              </li>
+            </ul>
+        </div>
+        <div className="right">
+        <ul>
+            <li className="text">
+              Bootstrap
+            </li>
+            <li className="text">
+              Gsap/ Anime
+            </li>
+            <li className="text">
+              ES6
+            </li>
+            <li className="text">
+              Webpack
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="about-skill-detail">
+        <div className="skill-exp">
+          <h1 className="header sh-text">Tools</h1>
+        </div>
+      </div>
+      <div className="language-list-detail">
+        <div className="left">
+          <ul>
+              <li className="text">
+                Git
+              </li>
+              <li className="text">
+                Chrome Debugger Tools
+              </li>
+              <li className="text">
+                Weblogic Server
+              </li>
+            </ul>
+        </div>
+        <div className="right">
+        <ul>
+            <li className="text">
+              Google Analytics / Tag Manager  
+            </li>
+            <li className="text">
+              Adobe xD
+            </li>
+            <li className="text">
+              Adobe Photoshop
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+const SectionFour = () => {
   const sectionRef2 = useRef(null);
 
   const intersection2 = useIntersection(sectionRef2, {
@@ -221,7 +342,7 @@ const SectionThree = () => {
 
   return (
     <div className="study-exp-section" ref={sectionRef2}>
-      <h1 className="numbered-heading left sh-text" data-before-content="III. ">
+      <h1 className="numbered-heading left sh-text" data-before-content="IV. ">
         Place I Studied.
       </h1>
       <div className="about-study-detail">
@@ -348,6 +469,7 @@ export const AboutMe = () => {
           <SectionOne />
           <SectionTwo />
           <SectionThree />
+          <SectionFour />
         </div>
         <div className="right-content">
           <p className="scrollDown">SCROLLDOWN</p>

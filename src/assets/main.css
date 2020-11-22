@@ -830,6 +830,47 @@ img {
             font-size: 1rem;
             line-height: 1.5rem; } }
 
+.about-page .skill-exp-section {
+  height: 100vh;
+  padding-top: 3rem;
+  opacity: 0; }
+  .about-page .skill-exp-section .about-skill-detail {
+    padding-top: 2rem; }
+    .about-page .skill-exp-section .about-skill-detail .skill-exp .header {
+      font-size: 1.7rem;
+      padding-bottom: 1rem; }
+  .about-page .skill-exp-section .language-list-detail {
+    display: flex;
+    flex-direction: row; }
+    .about-page .skill-exp-section .language-list-detail .left {
+      flex: 1; }
+    .about-page .skill-exp-section .language-list-detail .right {
+      flex: 1; }
+    .about-page .skill-exp-section .language-list-detail ul {
+      padding: 1.5rem;
+      list-style-type: none; }
+      .about-page .skill-exp-section .language-list-detail ul li {
+        opacity: 1; }
+        .about-page .skill-exp-section .language-list-detail ul li::before {
+          content: "\21FE";
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          color: #fff55a; }
+    .about-page .skill-exp-section .language-list-detail .text {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: #dee2e6;
+      padding-bottom: .5rem; }
+      @media (max-width: 596px) {
+        .about-page .skill-exp-section .language-list-detail .text {
+          font-size: 1rem;
+          line-height: 1.5rem; } }
+  @media (max-width: 596px) {
+    .about-page .skill-exp-section {
+      height: auto; } }
+
 .about-page .study-exp-section {
   height: 100vh;
   padding-top: 3rem;

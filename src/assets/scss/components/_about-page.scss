@@ -375,6 +375,77 @@
 
     }
 
+    .skill-exp-section {
+        height: 100vh;
+        padding-top:3rem;
+        opacity:0;
+
+        .about-skill-detail {
+            padding-top:2rem;
+
+            .skill-exp {
+
+                .header {
+                    font-size: 1.7rem;
+                    padding-bottom:1rem;
+                }
+            }
+
+        }
+
+        .language-list-detail {
+            display:flex;
+            flex-direction: row;
+
+            .left {
+                flex:1;
+            }
+
+            .right {
+                flex:1;
+            }
+
+            ul {
+                padding: 1.5rem;
+                list-style-type: none;
+                
+
+                li {                        
+                    opacity: 1;
+
+                    &::before {
+                        content: "\21FE";  
+                        font-weight: bold; 
+                        display: inline-block; 
+                        width: 1em; 
+                        margin-left: -1em;
+                        color:$yellow;
+                    }
+    
+                }
+            }
+
+            .text {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                color: $gray-300;
+                padding-bottom:.5rem;
+                // max-width:500px;
+    
+                @include sm {
+                    font-size:1rem;
+                    line-height: 1.5rem;
+                }
+    
+            }
+        }
+
+        @include sm {
+            height: auto;
+        }
+    
+    }
+
     .study-exp-section {
         height: 100vh;
         padding-top:3rem;

@@ -92,13 +92,17 @@ export const Header = () => {
 
 
 
-}
+  }
+
+  const goToHome = () => {
+    window.fullpage_api.moveTo('home');
+  }
 
   return (
     <div className="fullpage-header">
       <header className="header">
         <div className="left">
-          <div className="name"><Link to="/" > LANCE LEE </Link></div>
+          <div className="name" onClick={goToHome}>LANCE LEE</div>
         </div>
         <div className="right">
           <div className="social-media">
