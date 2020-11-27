@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "anime": "^0.1.2",
     "animejs": "^3.2.1",
+    "axios": "^0.21.0",
     "framer-motion": "^2.9.4",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
