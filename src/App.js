@@ -26,7 +26,7 @@ function App() {
         console.log("User's Country", res.country);
         // getAddress(res.lat, res.lon);
 
-        setLocation(res.data);
+        setLocation(location);
         putGoogleAnalytic(res.data);
       },
       (err) => {
@@ -35,16 +35,16 @@ function App() {
     );
   };
 
-  const getAddress = () => {
-    axios.get(`https://maps.googleapis.com/maps/api/geocode/json?' + 'latlng=' + latitude + ',' + longitude + '&key=' + GOOGLE_MAP_KEY`).then(
-      (res) => {
-        console.log('User\'s Address Data is ', res)
-      },
-      (err) => {
-        console.log('Request failed.  Returned status of', err)
-      }
-    );
-  }
+  // const getAddress = () => {
+  //   axios.get(`https://maps.googleapis.com/maps/api/geocode/json?' + 'latlng=' + latitude + ',' + longitude + '&key=' + GOOGLE_MAP_KEY`).then(
+  //     (res) => {
+  //       console.log('User\'s Address Data is ', res)
+  //     },
+  //     (err) => {
+  //       console.log('Request failed.  Returned status of', err)
+  //     }
+  //   );
+  // }
 
   const putGoogleAnalytic = (res) => {
     window.dataLayer = window.dataLayer || [];
